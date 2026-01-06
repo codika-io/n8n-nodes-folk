@@ -37,7 +37,6 @@ exports.createDescription = [
         displayName: 'Name',
         name: 'name',
         type: 'string',
-        required: false,
         default: '',
         displayOptions,
         description: 'The name of the deal (optional, max 1000 characters)',

@@ -294,7 +294,7 @@ exports.createDescription = [
         type: 'json',
         default: '{}',
         displayOptions,
-        description: 'Custom field values grouped by group ID. Format: { "groupId": { "fieldName": "value" } }',
+        description: 'Custom field values grouped by group ID. Format: { "groupId": { "fieldName": "value" } }.',
         routing: {
             send: {
                 type: 'body',

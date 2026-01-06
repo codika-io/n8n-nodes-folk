@@ -13,7 +13,6 @@ export const createDescription: INodeProperties[] = [
 		name: 'firstName',
 		type: 'string',
 		default: '',
-		required: false,
 		displayOptions,
 		description: 'First name of the person (optional, max 500 characters)',
 		routing: {
@@ -28,7 +27,6 @@ export const createDescription: INodeProperties[] = [
 		name: 'lastName',
 		type: 'string',
 		default: '',
-		required: false,
 		displayOptions,
 		description: 'Last name of the person (optional, max 500 characters)',
 		routing: {
@@ -313,7 +311,7 @@ export const createDescription: INodeProperties[] = [
 		type: 'json',
 		default: '{}',
 		displayOptions,
-		description: 'Custom field values grouped by group ID. Format: { "groupId": { "fieldName": "value" } }',
+		description: 'Custom field values grouped by group ID. Format: { "groupId": { "fieldName": "value" } }.',
 		routing: {
 			send: {
 				type: 'body',
