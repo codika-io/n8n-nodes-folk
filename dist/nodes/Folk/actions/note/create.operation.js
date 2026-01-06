@@ -33,11 +33,36 @@ exports.createDescription = [
         required: true,
         default: '',
         displayOptions,
-        description: 'The content of the note (supports markdown)',
+        description: 'The content of the note (supports markdown, max 100,000 characters)',
         routing: {
             send: {
                 type: 'body',
                 property: 'content',
+            },
+        },
+    },
+    {
+        displayName: 'Visibility',
+        name: 'visibility',
+        type: 'options',
+        required: true,
+        options: [
+            {
+                name: 'Public',
+                value: 'public',
+            },
+            {
+                name: 'Private',
+                value: 'private',
+            },
+        ],
+        default: 'public',
+        displayOptions,
+        description: 'The visibility of the note. Public notes are visible to all workspace users.',
+        routing: {
+            send: {
+                type: 'body',
+                property: 'visibility',
             },
         },
     },
@@ -59,29 +84,6 @@ exports.createDescription = [
                     send: {
                         type: 'body',
                         property: 'parentNote.id',
-                    },
-                },
-            },
-            {
-                displayName: 'Visibility',
-                name: 'visibility',
-                type: 'options',
-                options: [
-                    {
-                        name: 'Public',
-                        value: 'public',
-                    },
-                    {
-                        name: 'Private',
-                        value: 'private',
-                    },
-                ],
-                default: 'public',
-                description: 'The visibility of the note',
-                routing: {
-                    send: {
-                        type: 'body',
-                        property: 'visibility',
                     },
                 },
             },

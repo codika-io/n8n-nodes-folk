@@ -13,9 +13,9 @@ export const createDescription: INodeProperties[] = [
 		name: 'firstName',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions,
-		description: 'First name of the person',
+		description: 'First name of the person (optional, max 500 characters)',
 		routing: {
 			send: {
 				type: 'body',
@@ -28,9 +28,9 @@ export const createDescription: INodeProperties[] = [
 		name: 'lastName',
 		type: 'string',
 		default: '',
-		required: true,
+		required: false,
 		displayOptions,
-		description: 'Last name of the person',
+		description: 'Last name of the person (optional, max 500 characters)',
 		routing: {
 			send: {
 				type: 'body',
